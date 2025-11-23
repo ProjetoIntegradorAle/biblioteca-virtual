@@ -362,6 +362,13 @@ main p{
   font-size: 15px;
   width: 100%;
   transition: border-color 0.3s, background-color 0.3s;
+  min-height: 45px; /* igual ao input de título */
+  max-height: 120px;
+  resize: vertical;
+}
+
+.add-material input[type="text"] {
+  height: 45px;
 }
 
 .add-material input:focus,
@@ -376,6 +383,7 @@ main p{
 .form-row {
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
   gap: 10px;
   margin-bottom: 20px;
 }
