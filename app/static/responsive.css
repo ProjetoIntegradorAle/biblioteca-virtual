@@ -1,4 +1,27 @@
 /* Responsividade geral */
+@media (min-width: 769px) {
+  .dropdown {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar-busca form {
+    flex-direction: row; /* muda de column para row */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-bar-busca input[type="text"] {
+    flex: 1;
+  }
+
+  .search-btn-busca {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -292,56 +315,6 @@
 
   .content .icon {
     font-size: 2.5rem;
-  }
-
-  /* Barra de busca principal */
-  .search-bar-busca {
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-  }
-
-  .search-bar-busca form {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .search-bar-busca input[type="text"] {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .search-btn-busca {
-    width: 40px;
-    height: 40px;
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  /* Barra de busca secundária */
-  .search-bar {
-    flex-direction: column;
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .search-bar form {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .search-bar input[type="text"] {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .search-btn {
-    width: 40px;
-    height: 40px;
-    margin-left: 0;
-    margin-top: 10px;
   }
 }
 
@@ -652,5 +625,78 @@
     width: 100%;
     text-align: left;
     padding: 12px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-material {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .input-inline {
+    width: 100%;
+  }
+
+  .form-habit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .form-actions {
+    text-align: center;
+  }
+
+  .form-actions button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .btn-adicionar-material {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  #formAdicionarMaterial h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  #campoColaborador {
+    margin-top: 20px;
+  }
+
+  label.label-inline {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .switch {
+    width: 50px;
+    height: 26px;
+  }
+
+  .slider:before {
+    height: 20px;
+    width: 20px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(24px);
   }
 }
