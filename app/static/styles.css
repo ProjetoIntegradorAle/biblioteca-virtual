@@ -292,32 +292,6 @@ main p{
 }
 
 /* Adicionar Material */
-.add-material {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 50px 80px;
-    border-radius: 10px;
-    box-shadow: 0 8px 8px rgba(94, 78, 9, 0.2);
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-}
-
-.add-material h3 {
-    margin-top: 40px !important;
-    margin-bottom: 20px !important;
-}
-
-/* Alinhamento mais à direita dos campos de título e descrição */
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding-left: 40px; /* desloca os campos para a direita */
-}
-
-/* Labels ao lado */
 .label-inline {
     width: 150px;
     font-weight: 500;
@@ -326,7 +300,6 @@ main p{
     margin-right: 10px;
 }
 
-/* Inputs */
 .input-inline {
     flex: 1;
 }
@@ -342,7 +315,6 @@ main p{
     background-color: #f8f8f8;
 }
 
-/* Textarea de descrição igual ao input de título, mas expansível */
 .input-inline textarea {
     min-height: 40px;
     resize: vertical;
@@ -350,69 +322,138 @@ main p{
     overflow-y: auto;
 }
 
-
-.half-width {
-    flex: 1;
-    min-width: 250px;
-}
-
 .full-width {
     width: 100%;
 }
 
-/* Inputs e labels */
+/* Container geral do formulário */
+.add-material {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+}
+
+.add-material h3 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Labels e inputs */
 .add-material label {
-    display: block;
-    margin-bottom: 5px;
-    color: white;
-    font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: #eaeaea;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .add-material input,
 .add-material select,
 .add-material textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-    font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* Descrição expansível */
-.add-material textarea {
-    min-height: 80px;
-    resize: vertical;
+.add-material input:focus,
+.add-material select:focus,
+.add-material textarea:focus {
+  border-color: #4da3ff;
+  background-color: rgba(255,255,255,0.12);
+  outline: none;
 }
 
-/* Botão alinhado à direita */
+/* Layout em colunas */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.half-width {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .half-width {
+    width: 50%;
+  }
+}
+
+.form-habit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 .form-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 .add-material button {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-/* Toggle switches */
-.form-habit {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+.add-material button:hover {
+  background-color: #218838;
 }
 
-/* Reset rápido só para garantir */
-.switch, .slider { box-sizing: border-box; }
+#campoColaborador {
+  margin-top: 20px;
+}
 
-/* Container do switch */
+.btn-adicionar-material {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-adicionar-material:hover {
+  background-color: #0069d9;
+}
+
+.switch, .slider { 
+    box-sizing: border-box; 
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -420,7 +461,6 @@ main p{
   height: 28px;
 }
 
-/* Esconde o checkbox, mas mantém clicável via container */
 .switch input {
   position: absolute;
   opacity: 0;
@@ -428,10 +468,9 @@ main p{
   height: 28px;
   margin: 0;
   cursor: pointer;
-  z-index: 2; /* garante que clique toggle o input */
+  z-index: 2; 
 }
 
-/* Trilha do switch */
 .slider {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -440,7 +479,6 @@ main p{
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Bolinha */
 .slider::before {
   content: "";
   position: absolute;
@@ -464,22 +502,6 @@ main p{
 
 .switch input:focus + .slider {
   box-shadow: 0 0 0 3px rgba(76,175,80,0.35);
-}
-
-.label-inline {
-    width: 150px;
-    font-weight: 500;
-    color: white;
-    text-align: right;
-    margin-right: 10px;
-}
-
-.form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 .input-inline textarea {
