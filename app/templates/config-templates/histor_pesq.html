@@ -11,14 +11,14 @@
 </h1>
 
 <div class="section-container">
-    <div class="mat-grid">
+    <div class="materiais-grid">
         {% for item in historico %}
-        <div class="mat-compart" style="color: white;">
+        <div class="material-card">
             <a style="color: rgb(52, 187, 10); font-weight: bold; text-decoration: none;" href="{{ item.url_resultado }}">{{ item.termo }}</a>
             <span style="color: white;">— Pesquisa em: {{ item.data_pesquisa|date:"d/m/Y H:i" }}</span>
         </div>
         {% empty %}
-            <li style="color: white;">Nenhuma pesquisa realizada ainda.</li>
+            <p>Nenhuma pesquisa realizada ainda.</p>
         {% endfor %}
     </div>
 </div>

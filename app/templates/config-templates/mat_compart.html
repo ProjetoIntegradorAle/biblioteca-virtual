@@ -11,9 +11,9 @@
 </h1>
 
 <div class="section-container">
-    <div class="mat-grid">
+    <div class="materiais-grid">
         {% for material in materiais %}
-        <div class="mat-compart">
+        <div class="material-card">
             <strong>{{ material.titulo }}</strong><br>
             <strong>Descrição:</strong> {{ material.descricao }}<br>
             <a style="color: rgb(52, 187, 10); font-weight: bold; text-decoration: none;" 
@@ -21,7 +21,7 @@
             Compartilhado em: {{ material.data_compartilhado }}
         </div>
         {% empty %}
-            <li>Nenhum material compartilhado ainda.</li>
+            <p>Nenhum material compartilhado ainda.</p>
         {% endfor %}
     </div>
 </div>
