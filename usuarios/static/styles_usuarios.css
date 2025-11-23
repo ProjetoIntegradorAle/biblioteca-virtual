@@ -241,10 +241,9 @@ main p{
     padding-top: 6px !important;
 }
 
-/* Removido o flex para evitar desalinhamento */
 .dropdown-item {
     color: white;
-    padding: 12px 20px; /* espaçamento uniforme */
+    padding: 12px 20px;
     white-space: nowrap;
     font-weight: bold;
     font-size: 14px;
@@ -253,12 +252,14 @@ main p{
     display: block;
 }
 
-/* Ícones dentro do item, se houver */
 .dropdown-item i {
-    margin-right: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Hover estilizado */
+.dropdown-item:hover i {
+    color: #000000 !important;
+}
+
 .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
     color: #000000 !important;

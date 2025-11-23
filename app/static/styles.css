@@ -242,10 +242,9 @@ main p{
     padding-top: 6px !important;
 }
 
-/* Removido o flex para evitar desalinhamento */
 .dropdown-item {
     color: white;
-    padding: 12px 20px; /* espaçamento uniforme */
+    padding: 12px 20px;
     white-space: nowrap;
     font-weight: bold;
     font-size: 14px;
@@ -254,12 +253,15 @@ main p{
     display: block;
 }
 
-/* Ícones dentro do item, se houver */
 .dropdown-item i {
-    margin-right: 8px;
+    transition: color 0.3s ease;
 }
 
-/* Hover estilizado */
+.dropdown-item:hover i {
+    color: #000000 !important;
+}
+
+
 .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1) !important;
     color: #000000 !important;
@@ -267,13 +269,13 @@ main p{
 }
 
 .nav-link {
-  position: relative;
-  font-size: 24px; /* aumenta o emoji */
-  padding: 10px;
+    position: relative;
+    font-size: 24px; 
+    padding: 10px;
 }
 
 .nav-link span {
-  display: none; /* oculta o texto */
+    display: none; /* oculta o texto */
 }
 
 .btn-outline-light {
@@ -452,7 +454,6 @@ main p{
   transition: transform 0.25s ease;
 }
 
-/* Estado checado */
 .switch input:checked + .slider {
   background-color: #4CAF50;
 }
@@ -461,7 +462,6 @@ main p{
   transform: translateX(24px);
 }
 
-/* Opcional: estado focado para acessibilidade */
 .switch input:focus + .slider {
   box-shadow: 0 0 0 3px rgba(76,175,80,0.35);
 }
@@ -482,7 +482,6 @@ main p{
     flex-wrap: wrap;
 }
 
-/* Descrição expansível */
 .input-inline textarea {
     min-height: 80px;
     resize: vertical;
@@ -511,7 +510,6 @@ main p{
     font-weight: bold;
 }
 
-/* Centraliza o botão */
 #btnAdicionarMaterial {
     display: block;
     text-align: center;
@@ -519,12 +517,12 @@ main p{
 
 /* Estrutura Meus Materiais */
 .section-container {
-  background-color: rgba(255, 255, 255, 0.04);
-  border-radius: 10px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 0px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .section-title {
@@ -1321,6 +1319,7 @@ table{
 .card-content h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .card-content p {
