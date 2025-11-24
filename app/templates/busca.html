@@ -17,7 +17,7 @@
     <div class="material-resultado">
         <div class="card-content">
             <h3>Título: {{ material.titulo }}</h3>
-            <p class="autor"><strong>Autor:</strong> {{ material.autor }}</p>
+            <a href="{% url 'editar_perfil' %}" class="autor"><strong>Autor:</strong> {{ material.autor }}</a>
             <p class="descricao"><strong>Descrição:</strong> {{ material.descricao }}</p>
             <div class="meta-info">
                 <span class="tipo">{{ material.get_tipo_display }}</span>
