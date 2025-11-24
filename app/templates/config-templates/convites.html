@@ -75,7 +75,7 @@
               <p>Convite aceito. Você pode publicar o material:</p>
               <form method="POST" action="{% url 'publicar_material' convite.material.id %}">
                   {% csrf_token %}
-                  <button type="submit" class="btn-c btn-visualizar">Publicar Material</button>
+                  <button type="submit" class="btn publicar">Publicar Material</button>
               </form>
           {% endif %}
           {% else %}
