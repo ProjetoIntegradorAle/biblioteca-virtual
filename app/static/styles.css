@@ -263,6 +263,7 @@ main p{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     min-width: 170px !important;
     padding-top: 6px !important;
+    padding-bottom: 6px !important;
 }
 
 .dropdown-item {
