@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import FormCadastro, FormPerfil, FormLogin, CustomPasswordResetForm
+import datetime
 from django.contrib.auth import login as auth_login
-from .models import Perfil, User
+from .models import Perfil, User, FraseDoDia
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash, logout
 from django.contrib.auth.forms import PasswordChangeForm
@@ -123,4 +124,11 @@ def password_reset_view(request):
     else:
         form = CustomPasswordResetForm()
     return render(request, 'password_reset_form.html', {'form': form})
+
+
+def frase_do_dia(request):
+    dias = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado', 'domingo']
+    hoje = dias[datetime.datetime.today().weekday()]
+    frase = FraseDoDia.objects.filter(dia_semana=hoje).first()
+    return {'frase_do_dia': frase}
 

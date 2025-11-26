@@ -317,3 +317,4 @@ def publicar_material(request, material_id):
     else:
         messages.error(request, "Somente o remetente pode publicar após o colaborador aceitar.")
         return redirect('convites')
+

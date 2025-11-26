@@ -16,3 +16,22 @@ class Perfil(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class FraseDoDia(models.Model):
+    DIA_SEMANA_CHOICES = [
+        ('segunda', 'Segunda-feira'),
+        ('terca', 'Terça-feira'),
+        ('quarta', 'Quarta-feira'),
+        ('quinta', 'Quinta-feira'),
+        ('sexta', 'Sexta-feira'),
+        ('sabado', 'Sábado'),
+        ('domingo', 'Domingo'),
+    ]
+
+    dia_semana = models.CharField(max_length=10, choices=DIA_SEMANA_CHOICES, unique=True)
+    texto = models.TextField()
+    autor = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.dia_semana}: {self.texto} – {self.autor}"

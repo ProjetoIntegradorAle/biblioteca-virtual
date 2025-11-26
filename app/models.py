@@ -105,3 +105,5 @@ class ConviteColaboracao(models.Model):
 
     def __str__(self):
         return f"Convite de {self.remetente.username} para {self.destinatario.username} - {self.status}"
+
+

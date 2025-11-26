@@ -84,7 +84,11 @@
         </div>
         <div style="flex:1; min-width:200px;">
           <h3 class="footer-titulo">Frase do Dia</h3>
-          <p class="footer-texto">“Só sei que nada sei.” – Sócrates</p>
+          {% if frase_do_dia %}
+            <p class="footer-texto">“{{ frase_do_dia.texto }}” – {{ frase_do_dia.autor }}</p>
+          {% else %}
+            <p class="footer-texto">Nenhuma frase cadastrada para hoje.</p>
+          {% endif %}
         </div>
       </div>
       <hr style="margin:20px 0; border-color:#7f8c8d;">
