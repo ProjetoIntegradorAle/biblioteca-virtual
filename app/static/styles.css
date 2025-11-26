@@ -76,11 +76,11 @@ main p{
 }
 
 .footer-texto{
-    font-family: Georgia;
+    font-family: 'Arial', sans-serif;
 }
 
 .footer-copy{
-    font-family: Georgia;
+    font-family: 'Arial', sans-serif;
     text-align:center; 
     margin-top: 45px;
 }
