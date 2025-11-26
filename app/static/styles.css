@@ -948,17 +948,6 @@ main p{
     color: white;
 }
 
-/* Status */
-.status-pendente {
-    color: #ff9800;
-    font-weight: bold;
-}
-
-.status-aceito {
-    color: #4CAF50;
-    font-weight: bold;
-}
-
 .content-config {
     width: 90%;
     margin: auto;
@@ -1789,29 +1778,28 @@ label {
 }
 
 /* STATUS DO CONVITE */
-
 .status-pendente {
-  color: #dc3545;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 8px;
-  display: inline-block;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 8px;
+    display: inline-block;
 }
 
 .status-aceito {
-  color: #28a745;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 8px;
-  display: inline-block;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 8px;
+    display: inline-block;
 }
 
 .status-negado {
-  color: #6c757d;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 8px;
-  display: inline-block;
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 8px;
+    display: inline-block;
 }
 
 /* MENSAGENS DO SISTEMA */
