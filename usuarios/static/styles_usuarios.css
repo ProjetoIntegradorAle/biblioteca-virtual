@@ -876,7 +876,6 @@ label {
     font-size: 16px;
 }
 
-
 /* Botão cadastrar */
 .btn-cadastrar {
     width: 100%;
@@ -913,17 +912,19 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding-top: 40px;
+    min-height: 100vh; /* altura total da tela */
+    padding: 40px 20px; /* espaçamento lateral */
+    box-sizing: border-box;
 }
 
 .cadastro-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
     max-width: 500px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cadastro-box input {
@@ -936,7 +937,7 @@ label {
 }
 
 .cadastro-box label {
-    display: none; /* oculta os labels se o campo já tiver placeholder */
+    display: none; 
 }
 
 /* Título do cadastro */
@@ -954,6 +955,27 @@ label {
     content: "\1F3DB";
     margin-right: 8px;
     font-size: 32px;
+}
+
+/* Mensagem de aviso login e cadastro */
+.cadastro-box ul li {
+    display: block !important;
+    color: #b30000;
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff4d4d;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+
+.errorlist li {
+    display: block !important;
+}
+
+.errorlist.nonfield li {
+    color: #555;
+    display: block;
+    text-align: center;
 }
 
 /* Botão de voltar */
@@ -1060,27 +1082,6 @@ label {
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-}
-
-/* Mensagem de aviso login e cadastro */
-.cadastro-box ul li {
-    display: block !important;
-    color: #b30000;
-    background-color: #ffe6e6;
-    border-left: 4px solid #ff4d4d;
-    padding: 6px 10px;
-    margin-bottom: 8px;
-    border-radius: 3px;
-}
-
-.errorlist li {
-    display: block !important;
-}
-
-.errorlist.nonfield li {
-    color: #555;
-    display: block;
-    text-align: center;
 }
 
 /* MENSAGENS DO SISTEMA */
