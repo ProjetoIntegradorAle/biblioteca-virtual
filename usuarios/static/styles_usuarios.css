@@ -789,7 +789,7 @@ input[type="file"] {
     border-radius: 8px;
     text-align: center;
     width: 100%;
-    max-width: 340px;
+    max-width: 500px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -968,14 +968,30 @@ label {
     border-radius: 3px;
 }
 
-.errorlist li {
+/* Mensagens de erro dentro da caixa de login/cadastro */
+.cadastro-box ul.errorlist li,
+.login-box ul.errorlist li {
     display: block !important;
+    color: #b30000;
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff4d4d;
+    padding: 6px 10px;
+    margin: 8px auto;
+    border-radius: 3px;
+    max-width: 90%; /* controla largura */
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .errorlist.nonfield li {
-    color: #555;
-    display: block;
     text-align: center;
+    display: block !important;
+    color: #b30000;
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff4d4d;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
 }
 
 /* Botão de voltar */

@@ -10,8 +10,13 @@
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
 
-            <input type="text" name="username" placeholder="Usuário" class="form-control" required>
-            <input type="password" name="password" placeholder="Senha" class="form-control" required>
+            {{ form.non_field_errors }}
+
+            {{ form.username }}
+            {{ form.username.errors }}
+
+            {{ form.password }}
+            {{ form.password.errors }}
 
             <button type="submit" class="btn-login">Entrar</button>
             <a href="{% url 'password_reset' %}" class="btn-cadastrar">Esqueceu a senha?</a><br>

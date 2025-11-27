@@ -15,16 +15,8 @@ def cadastro(request):
         form = FormCadastro(request.POST)
         if form.is_valid():
             user = form.save()
-            # Verifica se o perfil já existe antes de criar um novo
-            perfil, created = Perfil.objects.get_or_create(user=user)
-            if created:
-                messages.success(request, 'Cadastro realizado com sucesso!')
-            else:
-                messages.warning(request, 'O perfil já existe.')
+            Perfil.objects.get_or_create(user=user)
             return redirect('login')
-        else:
-            print(form.errors)  # Mostra os erros no terminal
-            messages.error(request, 'Erro ao realizar o cadastro!')
     else:
         form = FormCadastro()
     return render(request, 'cadastro.html', {'form': form})
@@ -33,15 +25,12 @@ def login(request):
     if request.method == 'POST':
         form = FormLogin(request, data=request.POST)
         if form.is_valid():
-            print("Login válido")
             user = form.get_user()
             auth_login(request, user)
-            return redirect('perfil') 
+            return redirect('perfil')
         else:
             print(form.errors)
             messages.error(request, 'Usuário ou senha inválidos.')
-
-        
     else:
         form = FormLogin()
     return render(request, 'login.html', {'form': form})

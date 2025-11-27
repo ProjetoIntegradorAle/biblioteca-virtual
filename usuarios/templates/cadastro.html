@@ -11,35 +11,24 @@
 
             {{ form.non_field_errors }}
 
-            <div class="form-group">
-                {{ form.username }}
-                {{ form.username.errors }}
-            </div>
+            {{ form.username }}
+            {{ form.username.errors }}
 
-            <div class="form-group">
-                {{ form.email }}
-                {{ form.email.errors }}
-            </div>
+            {{ form.email }}
+            {{ form.email.errors }}
 
-            <div class="form-group">
-                {{ form.first_name }}
-                {{ form.first_name.errors }}
-            </div>
+            {{ form.first_name }}
+            {{ form.first_name.errors }}
 
-            <div class="form-group">
-                {{ form.last_name }}
-                {{ form.last_name.errors }}
-            </div>
 
-            <div class="form-group">
-                {{ form.password1 }}
-                {{ form.password1.errors }}
-            </div>
+            {{ form.last_name }}
+            {{ form.last_name.errors }}
 
-            <div class="form-group">
-                {{ form.password2 }}
-                {{ form.password2.errors }}
-            </div>
+            {{ form.password1 }}
+            {{ form.password1.errors }}
+
+            {{ form.password2 }}
+            {{ form.password2.errors }}
 
             <button type="submit" class="btn-login">Cadastrar</button>
             <a href="{% url 'login' %}" class="btn-cadastrar">Já tem conta? Faça login</a>
