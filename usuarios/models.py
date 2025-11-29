@@ -35,3 +35,5 @@ class FraseDoDia(models.Model):
 
     def __str__(self):
         return f"{self.dia_semana}: {self.texto} – {self.autor}"
+
+

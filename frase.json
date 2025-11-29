@@ -1,0 +1,65 @@
+[
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 1,
+        "fields": {
+        "dia_semana": "segunda",
+        "texto": "A tecnologia move o mundo!",
+        "autor": "Steve Jobs"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 2,
+        "fields": {
+        "dia_semana": "terca",
+        "texto": "A leitura engrandece a alma.",
+        "autor": "Voltaire"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 3,
+        "fields": {
+        "dia_semana": "quarta",
+        "texto": "Ouse conquistar a sí mesmo.",
+        "autor": "F. Nietzsche"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 4,
+        "fields": {
+        "dia_semana": "quinta",
+        "texto": "Você não encontra paz evitando a vida.",
+        "autor": "Virginia Woolf"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 5,
+        "fields": {
+        "dia_semana": "sexta",
+        "texto": "Torna-te quem tu és.",
+        "autor": "F. Nietzsche"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 6,
+        "fields": {
+        "dia_semana": "sabado",
+        "texto": "Ouse saber!",
+        "autor": "Immanuel Kant"
+        }
+    },
+    {
+        "model": "usuarios.frasedodia",
+        "pk": 7,
+        "fields": {
+        "dia_semana": "domingo",
+        "texto": "Qualidade não é um ato, é um hábito.",
+        "autor": "Aristóteles"
+        }
+    }
+]

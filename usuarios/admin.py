@@ -6,5 +6,7 @@ admin.site.register(User, UserAdmin)
 
 @admin.register(FraseDoDia)
 class FraseDoDiaAdmin(admin.ModelAdmin):
-    list_display = ('dia_semana', 'autor')
+    list_display = ('dia_semana', 'texto', 'autor')
     list_filter = ('dia_semana',)
+    search_fields = ('texto', 'autor')
+
