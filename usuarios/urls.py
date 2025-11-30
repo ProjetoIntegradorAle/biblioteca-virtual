@@ -1,7 +1,7 @@
 from django.urls import path
 from django.contrib.auth.views import LogoutView
 from django.contrib.auth import views as auth_views
-from .views import cadastro, perfil, login, editar_perfil
+from .views import cadastro, perfil, login, editar_perfil, perfil_autor
 
 urlpatterns = [
     path('cadastro/', cadastro, name='cadastro'),
@@ -16,4 +16,5 @@ urlpatterns = [
     
     path('perfil/', perfil, name='perfil'),
     path('editar-perfil/', editar_perfil, name='editar_perfil'),
+    path('perfil/<int:id>/', perfil_autor, name='perfil_autor'),
 ]

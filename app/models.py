@@ -19,7 +19,7 @@ class Material(models.Model):
         ('publicado', 'Publicado'),
     ]
     
-    autor = models.CharField(max_length=100)
+    autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='materiais_autoria')
     descricao = models.TextField(max_length=200)
     titulo = models.CharField(max_length=200)
     tipo = models.CharField(

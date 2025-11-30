@@ -100,7 +100,7 @@ def meus_materiais(request):
         if form.is_valid():
             novo_material = form.save(commit=False)
             novo_material.usuario = request.user
-            novo_material.autor = request.user.username
+            novo_material.autor = request.user 
             novo_material.status = 'rascunho'
             novo_material.save()
 
@@ -209,9 +209,11 @@ def buscar_materiais(request):
     if query:
         materiais = Material.objects.filter(
             Q(titulo__icontains=query) |
-            Q(autor__icontains=query) |
             Q(descricao__icontains=query) |
-            Q(tipo__icontains=query)
+            Q(tipo__icontains=query) |
+            Q(autor__username__icontains=query) |
+            Q(autor__first_name__icontains=query) |
+            Q(autor__last_name__icontains=query)
         )
 
         # Salvar no histórico

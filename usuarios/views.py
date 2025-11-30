@@ -9,6 +9,7 @@ from django.contrib.auth import update_session_auth_hash, logout
 from django.contrib.auth.forms import PasswordChangeForm
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 def cadastro(request):
     if request.method == 'POST':
@@ -120,4 +121,10 @@ def frase_do_dia(request):
     hoje = dias[datetime.datetime.today().weekday()]
     frase = FraseDoDia.objects.filter(dia_semana=hoje).first()
     return {'frase_do_dia': frase}
+
+
+def perfil_autor(request, id):
+    autor = get_object_or_404(User, id=id)
+    materiais = autor.material_set.all()  # ou o nome correto do related_name
+    return render(request, 'perfil_autor.html', {'autor': autor, 'materiais': materiais})
 
