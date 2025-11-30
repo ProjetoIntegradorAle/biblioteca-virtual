@@ -789,7 +789,7 @@ input[type="file"] {
     border-radius: 8px;
     text-align: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -921,7 +921,7 @@ label {
     background: rgba(255, 255, 255, 0.95);
     padding: 30px;
     border-radius: 10px;
-    text-align: left;
+    text-align: center;
     width: 100%;
     max-width: 500px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);

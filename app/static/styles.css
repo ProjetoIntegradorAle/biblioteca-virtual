@@ -378,8 +378,7 @@ main p{
 }
 
 .add-material input,
-.add-material textarea,
-.add-material select {
+.add-material textarea {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.2);
@@ -393,11 +392,12 @@ main p{
     resize: vertical;
 }
 
-.add-material option {
+.add-material select {
+    background-color: #333; /* escuro */
+    color: white;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.2);
-    background-color: rgba(255,255,255,0.08);
     font-size: 15px;
     width: 100%;
     transition: border-color 0.3s, background-color 0.3s;
@@ -405,6 +405,7 @@ main p{
     max-height: 120px;
     resize: vertical;
 }
+
 
 .add-material input[type="text"] {
     height: 45px;
