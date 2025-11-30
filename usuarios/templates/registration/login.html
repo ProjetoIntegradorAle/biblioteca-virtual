@@ -10,13 +10,25 @@
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
 
-            {{ form.non_field_errors }}
+            {% if form.non_field_errors %}
+                <div class="error">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
 
-            {{ form.username }}
-            {{ form.username.errors }}
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Usuário" class="form-control" required>
+                {% if form.username.errors %}
+                    <div class="error">{{ form.username.errors }}</div>
+                {% endif %}
+            </div>
 
-            {{ form.password }}
-            {{ form.password.errors }}
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Senha" class="form-control" required>
+                {% if form.password.errors %}
+                    <div class="error">{{ form.password.errors }}</div>
+                {% endif %}
+            </div>
 
             <button type="submit" class="btn-login">Entrar</button>
             <a href="{% url 'password_reset' %}" class="btn-cadastrar">Esqueceu a senha?</a><br>
