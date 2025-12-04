@@ -393,7 +393,7 @@ main p{
 }
 
 .add-material select {
-    background-color: #333; /* escuro */
+    background-color: rgba(255, 255, 255, 0.08);
     color: white;
     padding: 12px;
     border-radius: 8px;
@@ -712,6 +712,13 @@ main p{
 .card-content{
     margin-top: 0;
     text-align: left;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .card-actions {
