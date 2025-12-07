@@ -5,6 +5,26 @@
 <h2>Perfil de {{ autor.get_full_name|default:autor.username }}</h2>
 <p>Email: {{ autor.email }}</p>
 
+<ul>
+    {% if perfil.bio %}
+      <p class="perfil-bio">{{ perfil.bio }}</p>
+    {% else %}
+      <p class="perfil-bio">O usuário ainda não escreveu uma biografia.</p>
+    {% endif %}
+    
+    {% if perfil.cidade %}
+      <p class="perfil-cidade">Cidade: {{ perfil.cidade }}</p>
+    {% else %}
+      <p class="perfil-cidade">Cidade não informada.</p>
+    {% endif %}
+  
+    {% if perfil.estado %}
+      <p class="perfil-estado">Estado: {{ perfil.estado }}</p>
+    {% else %}
+      <p class="perfil-estado">Estado não informado.</p>
+    {% endif %}
+</ul>
+
 <h3>Materiais publicados:</h3>
 <ul>
     {% for material in materiais %}
