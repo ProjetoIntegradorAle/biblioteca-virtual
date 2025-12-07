@@ -6,13 +6,14 @@
 {% block content %}
 <div class="perfil-box text-center">
     <h2>Perfil de {{ autor.get_full_name|default:autor.username }}</h2>
-    <p>Email: {{ autor.email }}</p>
 
     {% if perfil and perfil.avatar %}
         <img src="{{ perfil.avatar.url }}" alt="Avatar do usuário" class="rounded-circle mb-3" width="150" height="150">
     {% else %}
         <img src="{{ autor.email|gravatar_url:200 }}" alt="Avatar do usuário" class="rounded-circle mb-3" width="150" height="150">
     {% endif %}
+
+    <p>Email: {{ autor.email }}</p>
 
     <ul>
         {% if perfil and perfil.bio %}
