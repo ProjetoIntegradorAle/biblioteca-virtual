@@ -1,36 +1,46 @@
-{% extends 'base.html' %}
+{% extends 'base_usuarios.html' %}
+{% load gravatar %}
+
 {% block title %}Perfil de {{ autor.get_full_name|default:autor.username }}{% endblock %}
 
 {% block content %}
-<h2>Perfil de {{ autor.get_full_name|default:autor.username }}</h2>
-<p>Email: {{ autor.email }}</p>
+<div class="perfil-box text-center">
+    <h2>Perfil de {{ autor.get_full_name|default:autor.username }}</h2>
+    <p>Email: {{ autor.email }}</p>
 
-<ul>
-    {% if perfil.bio %}
-      <p class="perfil-bio">{{ perfil.bio }}</p>
+    {% if perfil and perfil.avatar %}
+        <img src="{{ perfil.avatar.url }}" alt="Avatar do usuário" class="rounded-circle mb-3" width="150" height="150">
     {% else %}
-      <p class="perfil-bio">O usuário ainda não escreveu uma biografia.</p>
+        <img src="{{ autor.email|gravatar_url:200 }}" alt="Avatar do usuário" class="rounded-circle mb-3" width="150" height="150">
     {% endif %}
+
+    <ul>
+        {% if perfil and perfil.bio %}
+        <p class="perfil-bio">{{ perfil.bio }}</p>
+        {% else %}
+        <p class="perfil-bio">O usuário ainda não escreveu uma biografia.</p>
+        {% endif %}
+        
+        {% if perfil and perfil.cidade %}
+        <p class="perfil-cidade">Cidade: {{ perfil.cidade }}</p>
+        {% else %}
+        <p class="perfil-cidade">Cidade não informada.</p>
+        {% endif %}
     
-    {% if perfil.cidade %}
-      <p class="perfil-cidade">Cidade: {{ perfil.cidade }}</p>
-    {% else %}
-      <p class="perfil-cidade">Cidade não informada.</p>
-    {% endif %}
-  
-    {% if perfil.estado %}
-      <p class="perfil-estado">Estado: {{ perfil.estado }}</p>
-    {% else %}
-      <p class="perfil-estado">Estado não informado.</p>
-    {% endif %}
-</ul>
+        {% if perfil and perfil.estado %}
+        <p class="perfil-estado">Estado: {{ perfil.estado }}</p>
+        {% else %}
+        <p class="perfil-estado">Estado não informado.</p>
+        {% endif %}
+    </ul>
 
-<h3>Materiais publicados:</h3>
-<ul>
-    {% for material in materiais %}
-    <li>{{ material.titulo }}</li>
-    {% empty %}
-    <li>Nenhum material publicado.</li>
-    {% endfor %}
-</ul>
+    <h3>Materiais publicados:</h3>
+    <ul>
+        {% for material in materiais %}
+        <li>{{ material.titulo }}</li>
+        {% empty %}
+        <li>Nenhum material publicado.</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
