@@ -123,9 +123,13 @@ def frase_do_dia(request):
     frase = FraseDoDia.objects.filter(dia_semana=hoje).first()
     return {'frase_do_dia': frase}
 
-
 def perfil_autor(request, id):
     autor = get_object_or_404(User, id=id)
-    materiais = autor.material_set.all()  # ou o nome correto do related_name
-    return render(request, 'perfil_autor.html', {'autor': autor, 'materiais': materiais})
+    perfil = Perfil.objects.filter(user=autor).first() 
+    materiais = autor.materiais_autoria.all()  
+    return render(request, 'perfil_autor.html', {
+        'autor': autor,
+        'perfil': perfil,
+        'materiais': materiais
+    })
 
