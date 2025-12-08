@@ -573,6 +573,11 @@ label {
     margin: 8px;
 }
 
+.perfil-box ul{
+    list-style-type: none;
+    margin-right: 35px;
+}
+
 .perfil-box input[type="text"],
 .perfil-box input[type="email"],
 .perfil-box input[type="date"],
