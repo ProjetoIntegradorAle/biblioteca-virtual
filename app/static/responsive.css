@@ -700,3 +700,146 @@
     transform: translateX(24px);
   }
 }
+
+/* Estilo base */
+.search-bar-busca {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-bar-busca input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-btn-busca {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Container dos materiais */
+.materiais-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.material-resultado {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-content h3,
+.card-content p,
+.card-content a {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons button,
+.card-buttons form button {
+    flex: 1 1 auto;
+    min-width: 120px;
+}
+
+/* Modal responsivo */
+.modal-body .d-flex {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .modal-body .d-flex {
+        flex-direction: row;
+    }
+
+    .col-md-5,
+    .col-md-6 {
+        flex: 1;
+        max-width: 50%;
+    }
+}
+
+/* Comentários responsivos */
+.comentarios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.comentario-card {
+    flex: 1 1 calc(100% - 30px);
+}
+
+@media (min-width: 600px) {
+    .comentario-card {
+        flex: 0 1 calc(50% - 15px);
+    }
+}
+
+/* Melhorar responsividade da barra de busca */
+.search-bar-busca form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.search-bar-busca input[type="text"] {
+  flex: 1 1 300px;
+  min-width: 200px;
+}
+
+.search-btn-busca {
+  flex: 0 0 auto;
+}
+
+/* Ajuste para os cards */
+.material-resultado {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botões empilhados em telas pequenas */
+@media (max-width: 768px) {
+  .card-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-buttons button,
+  .card-buttons form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .materiais-criados-grid {
+    grid-template-columns: 1fr; /* Um por linha */
+  }
+}

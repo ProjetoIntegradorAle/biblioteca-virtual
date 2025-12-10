@@ -3,7 +3,7 @@
 {% block title %}Resultados da busca{% endblock %}
 
 {% block content %}
-<div class="search-bar-busca">
+<div class="search-bar-busca container">
     <form method="get" action="{% url 'buscar_materiais' %}">
         <input type="text" name="q" placeholder="Digite o título, autor ou palavra-chave...">
         <button type="submit" class="search-btn-busca" aria-label="Pesquisar"></button>
