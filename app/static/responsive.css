@@ -712,9 +712,7 @@
 .search-bar-busca input[type="text"] {
     width: 100%;
     max-width: 400px;
-    padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
     border: 1px solid #ccc;
 }
 
@@ -722,7 +720,6 @@
     padding: 10px 20px;
     background-color: #007bff;
     border: none;
-    border-radius: 5px;
     color: white;
     cursor: pointer;
 }
@@ -736,12 +733,10 @@
 }
 
 .material-resultado {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 15px;
+    padding: 20px;
     width: 100%;
-    max-width: 500px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .card-content h3,
@@ -814,15 +809,6 @@
 
 .search-btn-busca {
   flex: 0 0 auto;
-}
-
-/* Cards de resultado */
-.material-resultado {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 8px; /* mantém borda arredondada */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* mantém leve sombra */
-  background-color: inherit; /* mantém cor original */
 }
 
 /* Botões empilhados em telas menores */
