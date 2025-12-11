@@ -19,7 +19,7 @@
             <h3>Título: {{ material.titulo }}</h3>
             
             {% if material.autor %}
-                <a href="{% url 'perfil_autor' material.autor.id %}"><strong>Autor:</strong> {{ material.autor.username }}</a>
+                <a href="{% url 'perfil_autor' material.autor.id %}"><strong><i class="bi bi-person-fill"></i> Autor:</strong> {{ material.autor.username }}</a>
             {% else %}
                 <p><strong>Autor:</strong> Não disponível</p>
             {% endif %}
