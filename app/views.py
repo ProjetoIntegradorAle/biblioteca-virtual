@@ -289,11 +289,11 @@ def convites(request):
         'enviados': enviados
     })
 
+
 @login_required
 def publicar_material(request, material_id):
     material = get_object_or_404(Material, id=material_id)
 
-    # Verifica se o usuário logado é o remetente do convite
     convite = ConviteColaboracao.objects.filter(
         material=material,
         remetente=request.user,
@@ -301,14 +301,11 @@ def publicar_material(request, material_id):
     ).first()
 
     if convite:
-        # Atualiza autor com remetente + colaborador
-        autor_principal = material.usuario.username
-        colaborador = convite.destinatario.username
+        # autor continua sendo o remetente (já está salvo como request.user)
+        colaborador = convite.destinatario
 
-        if autor_principal != colaborador:
-            material.autor = f"{autor_principal} e {colaborador}"
-        else:
-            material.autor = autor_principal
+        # adiciona colaborador confirmado
+        material.colaboradores_confirmados.add(colaborador)
 
         material.status = 'publicado'
         material.data_compartilhado = timezone.now()
@@ -319,4 +316,5 @@ def publicar_material(request, material_id):
     else:
         messages.error(request, "Somente o remetente pode publicar após o colaborador aceitar.")
         return redirect('convites')
+
 
