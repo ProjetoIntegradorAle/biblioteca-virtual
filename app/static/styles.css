@@ -327,6 +327,8 @@ main p{
 
 .input-inline {
     flex: 1;
+    color: white !important;
+    text-align: left !important;
 }
 
 .input-inline input,
@@ -348,8 +350,7 @@ main p{
 }
   
 .input-inline select {
-    background-color: #f8f8f8 !important;
-    color: #333 !important; /* cor escura para o texto */
+    color: white !important;
 }
 
 .input-inline select option {
@@ -374,10 +375,6 @@ main p{
   .form-row {
     flex-direction: row;
     gap: 20px;
-  }
-
-  .half-width {
-    width: 50%;
   }
 }
 
