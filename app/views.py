@@ -60,8 +60,17 @@ def material_detalhe(request, material_id):
 
 @login_required
 def avaliacao_receb(request):
-    materiais_com_interacoes = Material.objects.filter(autor=request.user).prefetch_related('comentarios', 'curtidas')
-    return render(request, 'config-templates/avaliacao_receb.html', {'materiais': materiais_com_interacoes})
+    materiais = Material.objects.filter(autor=request.user).prefetch_related('comentarios', 'curtidas')
+
+    tem_avaliacoes = any(
+        m.comentarios.exists() or m.curtidas.exists()
+        for m in materiais
+    )
+
+    return render(request, 'config-templates/avaliacao_receb.html', {
+        'materiais': materiais,
+        'tem_avaliacoes': tem_avaliacoes
+    })
 
 @login_required
 def comentar(request, material_id):

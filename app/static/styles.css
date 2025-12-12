@@ -716,6 +716,11 @@ main p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.material-card h6{
+    margin-top: 10px !important;
+    align-items: center !important;
+}
+
 .card-content{
     margin-top: 0;
     text-align: left;
