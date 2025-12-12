@@ -356,18 +356,6 @@
     margin: 10px 0;
   }
 
-  .card-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn-salvar,
-  .btn-abrir-modal {
-    width: 100%;
-    font-size: 0.85rem;
-    padding: 0.5rem;
-  }
-
   /* Materiais criados */
   .materiais-criados-container {
     width: 95%;
@@ -440,12 +428,6 @@
 @media (max-width: 480px) {
   .material-resultado {
     padding: 1rem;
-  }
-
-  .btn-salvar,
-  .btn-abrir-modal {
-    font-size: 0.8rem;
-    padding: 0.4rem;
   }
 
   .titulo-principal {
@@ -711,7 +693,7 @@
 
 .search-bar-busca input[type="text"] {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
 }
@@ -744,20 +726,6 @@
 .card-content a {
     margin-bottom: 10px;
     word-wrap: break-word;
-}
-
-.card-buttons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.card-buttons button,
-.card-buttons form button {
-    flex: 1 1 auto;
-    min-width: 120px;
 }
 
 /* Modal responsivo */
@@ -804,24 +772,10 @@
 
 .search-bar-busca input[type="text"] {
   flex: 1 1 300px;
-  min-width: 200px;
 }
 
 .search-btn-busca {
   flex: 0 0 auto;
-}
-
-/* Botões empilhados em telas menores */
-@media (max-width: 768px) {
-  .card-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .card-buttons button,
-  .card-buttons form button {
-    width: 100%;
-  }
 }
 
 /* Grid dos materiais salvos: um por linha em telas menores */
@@ -846,13 +800,7 @@
   }
 
   .material-resultado {
-    padding: 12px;
-  }
-
-  .card-buttons button,
-  .card-buttons form button {
-    font-size: 14px;
-    padding: 8px;
+    padding: 20px;
   }
 }
 
