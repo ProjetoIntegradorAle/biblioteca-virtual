@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)http://127.0.0.1:8000/sobre/ -->
+<!-- saved from url=(0036)http://127.0.0.1:8000/configuracoes/ -->
 <html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sobre_files/styles.css">
-    <link rel="stylesheet" href="./sobre_files/responsive.css">
-    <title>Sobre</title>
+    <link rel="stylesheet" href="./configurações_files/styles.css">
+    <link rel="stylesheet" href="./configurações_files/responsive.css">
+    <title>Configurações</title>
     <!-- Bootstrap CSS -->
-    <link href="./sobre_files/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./sobre_files/bootstrap-icons.css">
+    <link href="./configurações_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./configurações_files/bootstrap-icons.css">
 </head>
 <body>
   <header class="navbar d-flex align-items-center px-4">
@@ -42,7 +42,7 @@
         <li><a class="dropdown-item" href="http://127.0.0.1:8000/configuracoes/"><i class="bi bi-gear-fill"></i> Configurações</a></li>
         <li>
           <form action="http://127.0.0.1:8000/accounts/logout/" method="POST" style="margin: 0;">
-            <input type="hidden" name="csrfmiddlewaretoken" value="rOIqWZFMamGgPLeEDR0SwtGJJ4s5LLVwluglu0HS0OCrWFvaZPXGLXpF2r0If6lH">
+            <input type="hidden" name="csrfmiddlewaretoken" value="PNUmKLaiXV66AeM1Boj8vsqDoLulaNWdJtshiMcoNn2hH83xXmgWKW9zH82YE8mo">
             <button type="submit" class="dropdown-item" style="border: none; font-weight: 650;">
               <i class="bi bi-box-arrow-right"></i> Sair
             </button>
@@ -58,36 +58,46 @@
           
 
           
+<h1 style="margin-bottom: 30px;">
+    <a class="icon-brand">
+        Configurações
+    </a>
+</h1>
 
-    <main style="padding: 0px 15px;" class="sobre">
-        <h1>
-            <a class="icon-brand">
-                Sobre a Biblioteca Virtual Alexandria
-            </a>
-        </h1>
-        <div class="s_texto">
-            <p>
-                <strong>Bem-vindo à Biblioteca Virtual Alexandria!</strong>
-            </p><p>
-                Inspirada na lendária Biblioteca de Alexandria, o Sistema de Biblioteca Virtual é um software que tem como 
-                objetivo centralizar e organizar os trabalhos acadêmicos em um repositório digital acessível online, 
-                facilitando a consulta de qualquer lugar e a qualquer momento. 
-                Nesta plataforma, objetiva-se democratizar e facilitar o acesso ao conhecimento através da vasta coleção de 
-                documentos, relatórios, artigos e vídeos acadêmicos e recursos educacionais criados pelos alunos do campus 
-                que sejam relevantes para seus estudos e interesses pessoais.
-                Com uma interface amigável e recursos avançados de busca, os usuários podem facilmente encontrar e acessar os 
-                materiais.
-            </p><p>
-                Junte-se a nós nessa jornada pelo conhecimento e compartilhe seus materiais na Biblioteca Virtual Alexandria!
-            </p>
-            <p>
-                <strong>Equipe de Desenvolvimento:</strong> Luana Lima e João Victor, estudantes da turma de 2022 no curso Informática 
-                para Internet/Instituto Federal de São Paulo do Potengi (IFRN-SPP).
-            </p>
-            
-        </div>
-    </main>
+<div class="section-container">
+    <h2 class="section-title">Configurações da Conta:</h2>
+    <div class="botoes-config">
+        <button id="btnMateriais" class="botao-config">Materiais Compartilhados</button>
+        <button id="btnHistorico" class="botao-config">Histórico de Pesquisa</button>
+        <button id="btnComentarios" class="botao-config">Avaliações Recebidas</button>  
+    </div>
+</div>
 
+<div class="section-container">
+    <h2 class="section-title">Preferências de Notificação:</h2>
+    <div class="botoes-config">
+        <button id="btnPermissoesAvaliacao" class="botao-config">Permissões de Avaliações</button>
+        <button id="btnConvites" class="botao-config">Convites de Colaboração</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("btnMateriais").onclick = function() {
+        window.location.href = "/mat_compart/";
+    };
+    document.getElementById("btnHistorico").onclick = function() {
+        window.location.href = "/histor_pesq/";
+    };
+    document.getElementById("btnComentarios").onclick = function() {
+        window.location.href = "/avaliacao_receb/";
+    };
+    document.getElementById("btnPermissoesAvaliacao").onclick = function() {
+        window.location.href = "/permissoes_avali/";
+    };
+    document.getElementById("btnConvites").onclick = function() {
+        window.location.href = "/convites/";
+    };
+</script>
 
           
       </div>
@@ -121,9 +131,9 @@
   [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
   </script>
 
-  <script src="./sobre_files/bootstrap.bundle.min.js.download"></script>
-  <script src="./sobre_files/jquery-3.5.1.slim.min.js.download"></script>
-  <script src="./sobre_files/popper.min.js.download"></script>
+  <script src="./configurações_files/bootstrap.bundle.min.js.download"></script>
+  <script src="./configurações_files/jquery-3.5.1.slim.min.js.download"></script>
+  <script src="./configurações_files/popper.min.js.download"></script>
 
 
 </body></html>

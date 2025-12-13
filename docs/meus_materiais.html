@@ -1,8 +1,63 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% block title %}Meus Materiais{% endblock %}
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:8000/meus_materiais/ -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Meus Materiais_files/styles.css">
+    <link rel="stylesheet" href="./Meus Materiais_files/responsive.css">
+    <title>Meus Materiais</title>
+    <!-- Bootstrap CSS -->
+    <link href="./Meus Materiais_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Meus Materiais_files/bootstrap-icons.css">
+</head>
+<body>
+  <header class="navbar d-flex align-items-center px-4">
+    <nav class="navbar-center w-100 d-flex justify-content-between align-items-center">
+      <!-- Ícones centralizados -->
+      <ul id="navMenu" class="nav justify-content-center mx-auto">
+        <li class="nav-item">
+          <a href="http://127.0.0.1:8000/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Início">
+            <i class="bi bi-house"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="http://127.0.0.1:8000/meus_materiais/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Meus Materiais">
+            <i class="bi bi-folder"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="http://127.0.0.1:8000/sobre/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sobre o Sistema">
+            <i class="bi bi-code-slash"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Dropdown do usuário à direita -->
+    <div class="dropdown">
+      <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-person-circle"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="http://127.0.0.1:8000/usuarios/editar-perfil/"><i class="bi bi-person-fill"></i> Área do Usuário</a></li>
+        <li><a class="dropdown-item" href="http://127.0.0.1:8000/configuracoes/"><i class="bi bi-gear-fill"></i> Configurações</a></li>
+        <li>
+          <form action="http://127.0.0.1:8000/accounts/logout/" method="POST" style="margin: 0;">
+            <input type="hidden" name="csrfmiddlewaretoken" value="1FmVVDkxAzpjSvzxiURJybXUETB3iyZmVlUQtEmDq1luZpQ3ESOxNFGQXg9GMTpx">
+            <button type="submit" class="dropdown-item" style="border: none; font-weight: 650;">
+              <i class="bi bi-box-arrow-right"></i> Sair
+            </button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-{% block content %}
+  <div class="wrapper">
+    <main>
+      <div class="content">
+          
+
+          
 <div class="page-wrapper">
 
   <h1 class="page-title">
@@ -17,16 +72,9 @@
         <div class="tipo-bloco">
             <h2>Vídeos</h2>
             <div class="materiais-criados-grid">
-                {% for video in videos_salvos %}
-                <div class="material-item">
-                    <h3>{{ video.material.titulo }}</h3>
-                    <p><strong>Autor:</strong> {{ video.material.autor }}</p>
-                    <p><strong>Descrição:</strong> {{ video.material.descricao }}</p>
-                    <a href="{% url 'visualizar_material' video.material.id %}" class="btn visualizar">Visualizar Material</a>
-                </div>
-                {% empty %}
+                
                 <p>Não há vídeos salvos.</p>
-                {% endfor %}
+                
             </div>
         </div>
 
@@ -34,16 +82,9 @@
         <div class="tipo-bloco">
             <h2>Slides</h2>
             <div class="materiais-criados-grid">
-                {% for slide in slides_salvos %}
-                <div class="material-item">
-                    <h3>{{ slide.material.titulo }}</h3>
-                    <p><strong>Autor:</strong> {{ slide.material.autor }}</p>
-                    <p><strong>Descrição:</strong> {{ slide.material.descricao }}</p>
-                    <a href="{% url 'visualizar_material' slide.material.id %}" class="btn visualizar">Visualizar Material</a>
-                </div>
-                {% empty %}
+                
                 <p>Não há slides salvos.</p>
-                {% endfor %}
+                
             </div>
         </div>
 
@@ -51,16 +92,28 @@
         <div class="tipo-bloco">
             <h2>Documentos</h2>
             <div class="materiais-criados-grid">
-                {% for documento in documentos_salvos %}
+                
                 <div class="material-item">
-                    <h3>{{ documento.material.titulo }}</h3>
-                    <p><strong>Autor:</strong> {{ documento.material.autor }}</p>
-                    <p><strong>Descrição:</strong> {{ documento.material.descricao }}</p>
-                    <a href="{% url 'visualizar_material' documento.material.id %}" class="btn visualizar">Visualizar Material</a>
+                    <h3>xfghfg</h3>
+                    <p><strong>Autor:</strong> Luana</p>
+                    <p><strong>Descrição:</strong> cfghfgh</p>
+                    <a href="http://127.0.0.1:8000/visualizar/1/" class="btn visualizar">Visualizar Material</a>
                 </div>
-                {% empty %}
-                <p>Não há documentos salvos.</p>
-                {% endfor %}
+                
+                <div class="material-item">
+                    <h3>sdsddsg</h3>
+                    <p><strong>Autor:</strong> Luana</p>
+                    <p><strong>Descrição:</strong> asggs</p>
+                    <a href="http://127.0.0.1:8000/visualizar/2/" class="btn visualizar">Visualizar Material</a>
+                </div>
+                
+                <div class="material-item">
+                    <h3>jjjjj</h3>
+                    <p><strong>Autor:</strong> Luana</p>
+                    <p><strong>Descrição:</strong> llllll</p>
+                    <a href="http://127.0.0.1:8000/visualizar/3/" class="btn visualizar">Visualizar Material</a>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -70,44 +123,58 @@
 <div class="section-container">
     <h2 class="section-title">Materiais Publicados</h2>
     <div class="materiais-grid">
-        {% for material in page_obj %}
+        
         <div class="material-card">
             <div class="card-content">
-                <h3>{{ material.titulo }}</h3>
-                <p class="autor"><strong>Autor:</strong> {{ material.autor }}</p>
-                <p class="descricao"><strong>Descrição:</strong> {{ material.descricao }}</p>
+                <h3>xfghfg</h3>
+                <p class="autor"><strong>Autor:</strong> Luana</p>
+                <p class="descricao"><strong>Descrição:</strong> cfghfgh</p>
                 <div class="meta-info">
-                    <span class="tipo">{{ material.get_tipo_display }}</span>
+                    <span class="tipo">Documento</span>
                 </div>
             </div>
             
             <div class="card-actions">
-                <a href="{% url 'visualizar_material' material.id %}" target="_blank" class="btn abrir">Abrir</a>
-                <a href="{% url 'editar_material' material.id %}" class="btn editar">Editar</a>
-                <form action="{% url 'deletar_material' material.id %}" method="post" style="display:inline;">
-                    {% csrf_token %}
+                <a href="http://127.0.0.1:8000/visualizar/1/" target="_blank" class="btn abrir">Abrir</a>
+                <a href="http://127.0.0.1:8000/editar/1/" class="btn editar">Editar</a>
+                <form action="http://127.0.0.1:8000/deletar/1/" method="post" style="display:inline;">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="1FmVVDkxAzpjSvzxiURJybXUETB3iyZmVlUQtEmDq1luZpQ3ESOxNFGQXg9GMTpx">
                     <button type="submit" class="btn deletar">Deletar</button>
                 </form>
             </div>
         </div>
-        {% endfor %}
+        
+        <div class="material-card">
+            <div class="card-content">
+                <h3>sdsddsg</h3>
+                <p class="autor"><strong>Autor:</strong> Luana</p>
+                <p class="descricao"><strong>Descrição:</strong> asggs</p>
+                <div class="meta-info">
+                    <span class="tipo">Documento</span>
+                </div>
+            </div>
+            
+            <div class="card-actions">
+                <a href="http://127.0.0.1:8000/visualizar/2/" target="_blank" class="btn abrir">Abrir</a>
+                <a href="http://127.0.0.1:8000/editar/2/" class="btn editar">Editar</a>
+                <form action="http://127.0.0.1:8000/deletar/2/" method="post" style="display:inline;">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="1FmVVDkxAzpjSvzxiURJybXUETB3iyZmVlUQtEmDq1luZpQ3ESOxNFGQXg9GMTpx">
+                    <button type="submit" class="btn deletar">Deletar</button>
+                </form>
+            </div>
+        </div>
+        
     </div>
 
     <div class="pagination">
         <span class="step-links">
-            {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; Primeira</a>
-                <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
-            {% endif %}
+            
 
             <span class="current">
-                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                Página 1 de 1.
             </span>
 
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">Próxima</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">Última &raquo;</a>
-            {% endif %}
+            
         </span>
     </div>
 </div>
@@ -123,36 +190,43 @@
   <div id="formAdicionarMaterial" style="display:none; margin-top:40px;">
     <div class="add-material">
       <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
+        <input type="hidden" name="csrfmiddlewaretoken" value="1FmVVDkxAzpjSvzxiURJybXUETB3iyZmVlUQtEmDq1luZpQ3ESOxNFGQXg9GMTpx">
 
         <!-- Título -->
         <div class="form-row">
-          <label for="{{ form.titulo.id_for_label }}" class="label-inline">Título:</label>
+          <label for="id_titulo" class="label-inline">Título:</label>
           <div class="input-inline">
-            {{ form.titulo }}
+            <input type="text" name="titulo" maxlength="200" required="" id="id_titulo">
           </div>
         </div>
 
         <!-- Descrição -->
         <div class="form-row">
-          <label for="{{ form.descricao.id_for_label }}" class="label-inline">Descrição:</label>
+          <label for="id_descricao" class="label-inline">Descrição:</label>
           <div class="input-inline">
-            {{ form.descricao }}
+            <textarea name="descricao" cols="40" rows="10" maxlength="200" required="" id="id_descricao"></textarea>
           </div>
         </div>
 
         <!-- Tipo e Arquivo lado a lado -->
         <div class="form-row">
           <div class="half-width">
-            <label for="{{ form.tipo.id_for_label }}" class="label-inline">Tipo:</label>
+            <label for="id_tipo" class="label-inline">Tipo:</label>
             <div class="input-inline">
-              {{ form.tipo }}
+              <select name="tipo" id="id_tipo">
+  <option value="SL">Slide</option>
+
+  <option value="VD">Vídeo</option>
+
+  <option value="DC" selected="">Documento</option>
+
+</select>
             </div>
           </div>
           <div class="half-width">
-            <label for="{{ form.arquivo.id_for_label }}" class="label-inline">Arquivo:</label>
+            <label for="id_arquivo" class="label-inline">Arquivo:</label>
             <div class="input-inline">
-              {{ form.arquivo }}
+              <input type="file" name="arquivo" required="" id="id_arquivo">
             </div>
           </div>
         </div>
@@ -178,10 +252,10 @@
         </div>
 
         <!-- Campo colaborador -->
-        <div class="form-row" id="campoColaborador" style="margin-top: 10px;">
-          <label for="{{ form.email_colaborador.id_for_label }}" class="label-inline">Email do colaborador:</label>
+        <div class="form-row" id="campoColaborador" style="margin-top: 10px; display: none;">
+          <label for="id_email_colaborador" class="label-inline">Email do colaborador:</label>
           <div class="input-inline">
-            {{ form.email_colaborador }}
+            <input type="email" name="email_colaborador" placeholder="Digite o e-mail do colaborador" maxlength="320" id="id_email_colaborador">
           </div>
         </div>
 
@@ -216,4 +290,42 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 </div>
-{% endblock %}
+
+          
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-div">
+        <div style="flex:1; min-width:200px;">
+          <h3 class="footer-titulo">Biblioteca Virtual Alexandria</h3>
+          <p class="footer-texto">Explore. Leia. Descubra.</p>
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <h3 class="footer-titulo">Contato</h3>
+          <p class="footer-texto">Email: contato@biblioteca.com</p>
+          <p class="footer-texto">WhatsApp: (84) 99999-9999</p>
+        </div>
+        <div style="flex:1; min-width:200px;">
+          <h3 class="footer-titulo">Frase do Dia</h3>
+          
+            <p class="footer-texto">“Ouse saber!” – Immanuel Kant</p>
+          
+        </div>
+      </div>
+      <hr style="margin:20px 0; border-color:#7f8c8d;">
+      <p class="footer-copy">© 2025 Biblioteca Alexandria</p>
+    </footer>
+  </div>
+
+  <script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
+
+  <script src="./Meus Materiais_files/bootstrap.bundle.min.js.download"></script>
+  <script src="./Meus Materiais_files/jquery-3.5.1.slim.min.js.download"></script>
+  <script src="./Meus Materiais_files/popper.min.js.download"></script>
+
+
+</body></html>
