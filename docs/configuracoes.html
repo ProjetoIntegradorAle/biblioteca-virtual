@@ -3,12 +3,12 @@
 <html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./configurações_files/styles.css">
-    <link rel="stylesheet" href="./configurações_files/responsive.css">
+    <link rel="stylesheet" href="./css/config-styles.css">
+    <link rel="stylesheet" href="./css/config-responsive.css">
     <title>Configurações</title>
     <!-- Bootstrap CSS -->
-    <link href="./configurações_files/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./configurações_files/bootstrap-icons.css">
+    <link href="./css/config-bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/config-bootstrap-icons.css">
 </head>
 <body>
   <header class="navbar d-flex align-items-center px-4">
@@ -16,17 +16,17 @@
       <!-- Ícones centralizados -->
       <ul id="navMenu" class="nav justify-content-center mx-auto">
         <li class="nav-item">
-          <a href="http://127.0.0.1:8000/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Início">
+          <a href="index.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Início">
             <i class="bi bi-house"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a href="http://127.0.0.1:8000/meus_materiais/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Meus Materiais">
+          <a href="meus_materiais.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Meus Materiais">
             <i class="bi bi-folder"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a href="http://127.0.0.1:8000/sobre/" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sobre o Sistema">
+          <a href="sobre.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sobre o Sistema">
             <i class="bi bi-code-slash"></i>
           </a>
         </li>
@@ -38,10 +38,10 @@
         <i class="bi bi-person-circle"></i>
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
-        <li><a class="dropdown-item" href="http://127.0.0.1:8000/usuarios/editar-perfil/"><i class="bi bi-person-fill"></i> Área do Usuário</a></li>
-        <li><a class="dropdown-item" href="http://127.0.0.1:8000/configuracoes/"><i class="bi bi-gear-fill"></i> Configurações</a></li>
+        <li><a class="dropdown-item" href="/usuarios/editar-perfil/"><i class="bi bi-person-fill"></i> Área do Usuário</a></li>
+        <li><a class="dropdown-item" href="configuracoes.html"><i class="bi bi-gear-fill"></i> Configurações</a></li>
         <li>
-          <form action="http://127.0.0.1:8000/accounts/logout/" method="POST" style="margin: 0;">
+          <form action="/accounts/logout/" method="POST" style="margin: 0;">
             <input type="hidden" name="csrfmiddlewaretoken" value="PNUmKLaiXV66AeM1Boj8vsqDoLulaNWdJtshiMcoNn2hH83xXmgWKW9zH82YE8mo">
             <button type="submit" class="dropdown-item" style="border: none; font-weight: 650;">
               <i class="bi bi-box-arrow-right"></i> Sair
@@ -131,9 +131,9 @@
   [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
   </script>
 
-  <script src="./configurações_files/bootstrap.bundle.min.js.download"></script>
-  <script src="./configurações_files/jquery-3.5.1.slim.min.js.download"></script>
-  <script src="./configurações_files/popper.min.js.download"></script>
+  <script src="./js/config-bootstrap.bundle.min.js"></script>
+  <script src="./js/config-jquery-3.5.1.slim.min.js"></script>
+  <script src="./js/config-popper.min.js"></script>
 
 
 </body></html>
