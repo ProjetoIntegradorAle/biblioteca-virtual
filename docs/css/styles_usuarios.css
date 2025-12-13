@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background: url('/static/img/foto_fundo.jpg') center center / cover no-repeat fixed;
+    background: url('img/foto_fundo.jpg') center center / cover no-repeat fixed;
     font-family: Arial, sans-serif;
     color: white;
     overflow-x: hidden;
@@ -32,7 +32,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/static/img/foto_fundo.jpg') center center/cover;
+    background: url('img/foto_fundo.jpg') center center/cover;
     filter: blur(8px);
     z-index: -2; /* Camada mais baixa */
     transform: scale(1.05);
