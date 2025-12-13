@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Configurações{% endblock %}
+
+{% block content %}
+<h1 style="margin-bottom: 30px;">
+    <a class="icon-brand">
+        Configurações
+    </a>
+</h1>
+
+<div class="section-container">
+    <h2 class="section-title">Configurações da Conta:</h2>
+    <div class="botoes-config">
+        <button id="btnMateriais" class="botao-config">Materiais Compartilhados</button>
+        <button id="btnHistorico" class="botao-config">Histórico de Pesquisa</button>
+        <button id="btnComentarios" class="botao-config">Avaliações Recebidas</button>  
+    </div>
+</div>
+
+<div class="section-container">
+    <h2 class="section-title">Preferências de Notificação:</h2>
+    <div class="botoes-config">
+        <button id="btnPermissoesAvaliacao" class="botao-config">Permissões de Avaliações</button>
+        <button id="btnConvites" class="botao-config">Convites de Colaboração</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("btnMateriais").onclick = function() {
+        window.location.href = "{% url 'mat_compart' %}";
+    };
+    document.getElementById("btnHistorico").onclick = function() {
+        window.location.href = "{% url 'histor_pesq' %}";
+    };
+    document.getElementById("btnComentarios").onclick = function() {
+        window.location.href = "{% url 'avaliacao_receb' %}";
+    };
+    document.getElementById("btnPermissoesAvaliacao").onclick = function() {
+        window.location.href = "{% url 'permissoes_avali' %}";
+    };
+    document.getElementById("btnConvites").onclick = function() {
+        window.location.href = "{% url 'convites' %}";
+    };
+</script>
+{% endblock %}
