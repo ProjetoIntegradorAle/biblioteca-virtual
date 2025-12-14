@@ -9,26 +9,31 @@
         <form method="post" action="{% url 'cadastro' %}">
             {% csrf_token %}
 
-            {{ form.non_field_errors }}
+            {% if form.errors %}
+                <div class="form-erros">
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
             {{ form.username }}
-            {{ form.username.errors }}
 
             {{ form.email }}
-            {{ form.email.errors }}
-
+            
             {{ form.first_name }}
-            {{ form.first_name.errors }}
 
             {{ form.last_name }}
-            {{ form.last_name.errors }}
 
             {{ form.password1 }}
-            {{ form.password1.errors }}
-
+            
             {{ form.password2 }}
-            {{ form.password2.errors }}
-
+            
             <button type="submit" class="btn-login">Cadastrar</button>
             <a href="{% url 'login' %}" class="btn-cadastrar">Já tem conta? Faça login</a>
         </form>
