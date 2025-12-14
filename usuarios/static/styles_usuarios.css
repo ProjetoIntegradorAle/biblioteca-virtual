@@ -853,6 +853,8 @@ input[type="file"] {
 
 .login-box button,
 .login-box a {
+    display: block;
+    margin: 10px auto;
     text-align: center;
 }
 
