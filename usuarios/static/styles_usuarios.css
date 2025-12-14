@@ -6,6 +6,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Para celulares */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; 
+    background-size: cover;
+    background-position: center;
+  }
+
+  body::before {
+    position: absolute; 
+    background-attachment: scroll;
+  }
+}
+
+
 html, body {
     height: 100%;
     margin: 0;
