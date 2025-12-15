@@ -12,25 +12,41 @@ HTML | CSS | PYTHON | DJANGO
 
 ## ⚙️ Instalação e Configuração
 1. Clone o repositório
-```git clone https://github.com/ProjetoIntegradorAle/biblioteca-virtual.git```
+```plaintext
+git clone https://github.com/ProjetoIntegradorAle/biblioteca-virtual.git
+```
 
 2. Crie e ative um ambiente virtual
 - Windows:
-```python -m venv venv```
-```venv\Scripts\activate```
+```plaintext 
+python -m venv venv
+```
+```plaintext
+venv\Scripts\activate
+```
 
 - Linux/Mac:
-```python3 -m venv venv```
-```source venv/bin/activate```
+```plaintext
+python3 -m venv venv
+```
+```plaintext
+source venv/bin/activate
+```
 
-3. Instale as dependências
-```pip install -r requirements.txt```
+- Instale as dependências
+```plaintext
+pip install -r requirements.txt
+```
 
 4. Execute as migrações do banco de dados
-```python manage.py migrate```
+```plaintext
+python manage.py migrate
+```
 
 5. Execute o servidor
-```python manage.py runserver```
+```plaintext
+python manage.py runserver
+```
 
 Acesse localmente: http://localhost:8000
 
