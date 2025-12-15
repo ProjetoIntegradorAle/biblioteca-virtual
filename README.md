@@ -53,6 +53,7 @@ BIBLIOTECA-VIRTUAL/
 ├── Procfile                # Configuração para deploy (Render)
 ├── README.md               # Documentação do projeto
 └── requirements.txt        # Dependências do projeto
+```
 
 ## 📌 Funcionalidades
 - Para instruções detalhadas, consulte o Manual do Usuário em: 
