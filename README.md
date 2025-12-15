@@ -11,12 +11,12 @@ HTML | CSS | PYTHON | DJANGO
 [João Victor](https://github.com/jv-victtor)
 
 ## ⚙️ Instalação e Configuração
-1. Clone o repositório
+### 1. Clone o repositório
 ```plaintext
 git clone https://github.com/ProjetoIntegradorAle/biblioteca-virtual.git
 ```
 
-2. Crie e ative um ambiente virtual
+### 2. Crie e ative um ambiente virtual
 - Windows:
 ```plaintext 
 python -m venv venv
@@ -33,17 +33,17 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-- Instale as dependências
+### 3. Instale as dependências
 ```plaintext
 pip install -r requirements.txt
 ```
 
-4. Execute as migrações do banco de dados
+### 4. Execute as migrações do banco de dados
 ```plaintext
 python manage.py migrate
 ```
 
-5. Execute o servidor
+### 5. Execute o servidor
 ```plaintext
 python manage.py runserver
 ```
