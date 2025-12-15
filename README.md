@@ -9,3 +9,50 @@ HTML | CSS | PYTHON | DJANGO
 ## 👥 Equipe 
 [Luana Lima](https://github.com/luanatslima) e 
 [João Victor](https://github.com/jv-victtor)
+
+## ⚙️ Instalação e Configuração
+1. Clone o repositório
+```git clone https://github.com/ProjetoIntegradorAle/biblioteca-virtual.git```
+
+2. Crie e ative um ambiente virtual
+- Windows:
+```python -m venv venv```
+```venv\Scripts\activate```
+
+- Linux/Mac:
+```python3 -m venv venv```
+```source venv/bin/activate```
+
+3. Instale as dependências
+```pip install -r requirements.txt```
+
+4. Execute as migrações do banco de dados
+```python manage.py migrate```
+
+5. Execute o servidor
+```python manage.py runserver```
+
+Acesse localmente: http://localhost:8000
+
+## 📂 Estrutura do Projeto
+```plaintext
+BIBLIOTECA-VIRTUAL/
+├── app/                     # Aplicações principais do Django
+├── config/                  # Configurações gerais do projeto
+├── docs/                   # Documentação do projeto
+├── media/                  # Arquivos enviados pelos usuários
+├── react-jsonplaceholder/  # Frontend React
+├── staticfiles/            # Arquivos estáticos (CSS, JS, imagens)
+├── usuarios/               # Módulo de autenticação e perfis
+├── venv/                   # Ambiente virtual
+├── .gitignore              # Arquivos e pastas ignorados pelo Git
+├── .python-version         # Versão do Python usada
+├── db.sqlite3              # Banco de dados SQLite
+├── frase.json              # Arquivo JSON 
+├── manage.py               # Gerenciador do Django
+├── Procfile                # Configuração para deploy (Render)
+├── README.md               # Documentação do projeto
+└── requirements.txt        # Dependências do projeto
+
+## 📌 Funcionalidades
+- Para instruções detalhadas, consulte o Manual do Usuário em: 
