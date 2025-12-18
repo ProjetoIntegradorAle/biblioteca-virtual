@@ -77,7 +77,7 @@
             pelos estudantes do campus IFRN. 
           </p>
           <div class="screenshot mt-3">
-            Imagem - página “Sobre a Biblioteca Virtual Alexandria”.
+            <img src="static/img/tela_sobre.png" alt="Página Sobre a Biblioteca Virtual Alexandria" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
           </div>
         </div>
 
@@ -86,7 +86,7 @@
           <h3>Público-alvo e Objetivo</h3>
           <ul class="mb-0">
             <li>
-                <strong>Público:</strong> 
+                <strong>Público-alvo:</strong> 
                 A biblioteca foi desenvolvida para estudantes do campus.
             </li>
             <li>
@@ -99,40 +99,63 @@
 
         <!-- Como fazer cadastro -->
         <div class="section-card" id="cadastro">
-          <h3>Como fazer cadastro</h3>
+          <h3>Como fazer o Cadastro?</h3>
           <div class="step mt-2">
             <div class="step-num">1</div>
             <div>
-              <p>Onde encontrar o botão “Cadastre-se” e quais dados são necessários?</p>
-              <div class="screenshot mt-2">Imagem - Formulário de cadastro.</div>
-            </div>
-          </div>
-          <div class="step mt-3">
-            <div class="step-num">2</div>
-            <div>
-              <p>Descrição de como confirmar o cadastro (ex.: e-mail de confirmação, mensagens de sucesso).</p>
-              <div class="screenshot mt-2">Imagem - Mensagem de confirmação.</div>
+              <p>O botão “Cadastre-se” está no final do formulário de login. Ao clicá-lo, o usuário será 
+              redirecionado para o formulário de cadastro.</p>
+              <p>Os dados necessários para realizar o cadastro são:</p>
+              <p>
+                <li>Nome de Usuário</li>, 
+                <li>E-mail</li>, 
+                <li>Nome</li>, 
+                <li>Sobrenome</li>, 
+                <li>Senha</li> e 
+                <li>Confirmação de Senha</li>
+              </p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_cadastro.png" alt="Formulário de Cadastro" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
+              <p>
+                <li>Após preencher os dados, clique no botão “Cadastrar”. 
+                Se todos os dados estiverem corretos, o cadastro será realizado com sucesso.</li>
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Como fazer login -->
         <div class="section-card" id="login">
-          <h3>Como fazer login</h3>
+          <h3>Como fazer Login?</h3>
           <div class="step mt-2">
             <div class="step-num">1</div>
             <div>
-              <p>Indicar onde acessar o login e como inserir usuário/senha.</p>
-              <div class="screenshot mt-2">Tela de login com campos e botões.</div>
+              <p>Após realizar o cadastro, o usuário será automaticamente redirecionado para a página de login.</p>
+              <p>Para fazer login, o usuário deve inserir as seguintes informações cadastradas:</p>
+              <p>
+                <li>Seu nome de usuário</li> 
+                <li>Sua senha</li> 
+              </p>
+              <p>Nos campos correspondentes</p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_login.png" alt="Formulário de Login" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
+              <p>
+                <li>Apos preencher os dados, clique no botão “Entrar”. Se os dados estiverem corretos, o usuário 
+                será redirecionado para a página inicial.</li>
+              </p>
             </div>
           </div>
           <div class="step mt-3">
             <div class="step-num">2</div>
             <div>
-              <p>O que esperar após entrar?: página inicial, menus e navegação básica.</p>
-              <div class="screenshot mt-2">Página inicial após login.</div>
+              <p>Após o usuário ser redirecionado para a página inicial, ele poderá visualizar os menus e navegar pela biblioteca.</p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_index.png" alt="Página Inicial após Login" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
             </div>
-          </div>
+          </div>S
         </div>
 
         <!-- Funcionalidade principal 1 -->
@@ -144,8 +167,10 @@
               <div class="step">
                 <div class="step-num">1</div>
                 <div>
-                  <p>Acesse “Meus Materiais” e clique em “Adicionar”.</p>
-                  <div class="screenshot mt-2">Formulário de envio de material.</div>
+                  <p>Acesse “Meus Materiais” através do menu.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_icon_mat.png" alt="Icon Meus Materiais" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,8 +178,10 @@
               <div class="step">
                 <div class="step-num">2</div>
                 <div>
-                  <p>Preencha título, descrição, curso, e anexos.</p>
-                  <div class="screenshot mt-2">Exemplo de preenchimento de campos.</div>
+                  <p>Depois de acessar “Meus Materiais”, siga até o final na página e clique em “Adicionar Novo Material”.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_add_mat.png" alt="Botão Adicionar Novo Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,8 +189,12 @@
               <div class="step mt-3 mt-md-0">
                 <div class="step-num">3</div>
                 <div>
-                  <p>Defina visibilidade (pública/privada) e confirme.</p>
-                  <div class="screenshot mt-2">Mensagem de sucesso e listagem.</div>
+                  <p>Após clicar em "Adicionar Novo Material", preencha o formulário abaixo e clique em "Criar Material". 
+                    Obs.: O usuário pode chamar outro usuário para colaborar no material, basta ativar "Habilitar Colaboração"
+                    e inserir o email do colaborador.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_form_mat.png" alt="Formulário de Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,8 +202,10 @@
               <div class="step mt-3 mt-md-0">
                 <div class="step-num">4</div>
                 <div>
-                  <p>Edite ou exclua materiais a qualquer momento.</p>
-                  <div class="screenshot mt-2">Tela de edição/exclusão.</div>
+                  <p>Visualize, edite ou exclua seus materiais a qualquer momento em "Materiais Publicados".</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_mat_publicado.png" alt="Tela de edição/exclusão de material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,32 +214,56 @@
 
         <!-- Funcionalidade principal 2 -->
         <div class="section-card" id="funcionalidade-2">
-          <h3>Como pesquisar e encontrar conteúdos?</h3>
-          <p>Mostrar como usar filtros, palavras-chave e navegação por categorias para localizar materiais rapidamente.</p>
+          <h3>Como pesquisar e encontrar Materiais?</h3>
+          <p>Digite autor, título, tipo de material ou palavras-chave na barra de busca e localize materiais rapidamente.</p>
           <div class="row g-3 mt-1">
             <div class="col-lg-7">
               <div class="step">
                 <div class="step-num">1</div>
                 <div>
-                  <p>Abra a busca avançada e digite palavras-chave.</p>
-                  <div class="screenshot mt-2">Campo de busca e filtros.</div>
+                  <p>Siga para a página inicial e digite o que deseja encontrar.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_busca.png" alt="Barra de busca na página inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
               <div class="step mt-3">
                 <div class="step-num">2</div>
                 <div>
-                  <p>Refine por curso, tipo de material e data.</p>
-                  <div class="screenshot mt-2">Resultado com filtros aplicados.</div>
+                  <p>Visualize o resultado de busca.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_resultado_busca.png" alt="Resultado" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="section-card" style="padding:16px;">
-                <h4 class="mb-2">Dicas rápidas de busca</h4>
+                <h4 class="mb-2">Dicas após realizar busca:</h4>
                 <ul class="mb-0">
-                  <li><strong>Palavras-chave:</strong> Use termos específicos.</li>
-                  <li><strong>Filtros:</strong> Aplique mais de um filtro para refinar.</li>
-                  <li><strong>Favoritos:</strong> Salve conteúdos relevantes para acesso rápido.</li>
+                  <p>
+                    <li>
+                      <strong>Abrir:</strong> 
+                      Em "Abrir", o usuário terá acesso as funções de visualização e avaliação 
+                      do material, podendo comentar e curtir.
+                    </li>
+                  </p>
+                  
+                  <p>
+                    <li>
+                      <strong>Salvar:</strong> 
+                      Em "Salvar", o usuário poderá salvar o material e acessa-lo em "Materiais 
+                      Salvos", na página "Meus Materiais".
+                    </li>
+                  </p>
+
+                  <p>
+                    <li>
+                      <strong>Autor:</strong> 
+                      Em "Autor", o usuário poderá visualizar o perfil 
+                      do usuário e seus materiais publicados.
+                    </li>
+                  </p>
                 </ul>
               </div>
             </div>
@@ -216,19 +273,27 @@
         <!-- Capturas de telas das funcionalidades -->
         <div class="section-card" id="capturas">
           <h3>Capturas de telas</h3>
-          <p>Insira abaixo as imagens das principais telas do sistema com legendas curtas e objetivas.</p>
+          <p>Principais telas do sistema com legendas curtas e objetivas.</p>
           <div class="row g-3">
             <div class="col-md-6">
-              <div class="screenshot">Tela inicial / Dashboard</div>
+              <div class="screenshot">
+                <img src="static/img/tela_index_menu_dropdown.png" alt="Tela Inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
             </div>
             <div class="col-md-6">
-              <div class="screenshot">Listagem de materiais</div>
+              <div class="screenshot">
+                <img src="static/img/tela_config.png" alt="Detalhes do Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
             </div>
             <div class="col-md-6">
-              <div class="screenshot">Detalhe do material</div>
+              <div class="screenshot">
+                <img src="static/img/tela_avaliar_material.png" alt="Avaliar Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
             </div>
             <div class="col-md-6">
-              <div class="screenshot">Perfil do usuário</div>
+              <div class="screenshot">
+                <img src="static/img/tela_perfil.png" alt="Perfil do Usuário" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
             </div>
           </div>
         </div>
@@ -295,40 +360,11 @@
             </div>
           </div>
         </div>
-
-        <hr class="divider" />
-
-        <!-- Nota de publicação / hospedagem -->
-        <div class="section-card">
-          <h3>Publicação do manual</h3>
-          <ul class="mb-0">
-            <li><strong>GitHub Pages:</strong> Publique esta página como site estático.</li>
-            <li><strong>Pasta do projeto:</strong> Inclua em <code>/docs/manual/</code> e aponte um link no menu principal.</li>
-            <li><strong>Responsividade:</strong> Teste em celulares e tablets para garantir boa leitura.</li>
-          </ul>
-        </div>
-
       </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-div">
-        <div style="flex:1; min-width:220px;">
-          <h3 class="footer-titulo">Biblioteca Virtual Alexandria</h3>
-          <p class="footer-texto">Explore. Leia. Descubra.</p>
-        </div>
-        <div style="flex:1; min-width:220px;">
-          <h3 class="footer-titulo">Contato</h3>
-          <p class="footer-texto">Email: contato@biblioteca.com</p>
-          <p class="footer-texto">WhatsApp: (84) 99999-9999</p>
-        </div>
-        <div style="flex:1; min-width:220px;">
-          <h3 class="footer-titulo">Frase do dia</h3>
-          <p class="footer-texto">"Ouse saber!" - Immanuel Kant</p>
-        </div>
-      </div>
-      <hr style="margin:20px 0; border-color:#7f8c8d;">
       <p class="footer-copy">&copy; 2025 Biblioteca Virtual Alexandria</p>
     </footer>
   </div>
