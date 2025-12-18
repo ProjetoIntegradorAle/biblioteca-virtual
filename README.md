@@ -68,7 +68,7 @@ BIBLIOTECA-VIRTUAL/
 ```
 
 ## 📌 Funcionalidades
-- Para instruções detalhadas, consulte o Manual do Usuário em: 
+- Para instruções detalhadas, consulte o [Manual do Usuário](https://projetointegradorale.github.io/biblioteca-virtual/)
 
 ## 👥 Autores 
 [Luana Lima](https://github.com/luanatslima) e 
