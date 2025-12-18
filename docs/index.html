@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manual do Usuário — Biblioteca Virtual Alexandria</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="navbar d-flex align-items-center px-4">
+    <nav class="navbar-center w-100 d-flex justify-content-between align-items-center">
+      <ul id="navMenu" class="nav justify-content-center mx-auto">
+        <li class="nav-item">
+          <a href="#bem-vindo" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Início">
+            <i class="bi bi-house"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#cadastro" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cadastro">
+            <i class="bi bi-person-plus"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#login" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+            <i class="bi bi-box-arrow-in-right"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#funcionalidade-1" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Funcionalidade 1">
+            <i class="bi bi-folder"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#funcionalidade-2" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Funcionalidade 2">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Perguntas Frequentes">
+            <i class="bi bi-question-circle"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contato" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contato">
+            <i class="bi bi-telephone"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo -->
+  <div class="wrapper">
+    <main>
+      <div class="content">
+
+        <!-- Título geral -->
+        <div class="section-card" id="bem-vindo">
+          <h2>Manual do Usuário — Biblioteca Virtual Alexandria</h2>
+          <p class="lead-muted">
+            Este manual ajuda você a usar o sistema com segurança e facilidade. Foi escrito em linguagem simples, sem termos técnicos.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <span class="badge-soft"><i class="bi bi-display"></i> Página Web responsiva</span>
+            <span class="badge-soft"><i class="bi bi-github"></i> Pode ser hospedado no GitHub Pages</span>
+            <span class="badge-soft"><i class="bi bi-folder2-open"></i> /docs/manual/index.html</span>
+          </div>
+        </div>
+
+        <!-- Página inicial explicando o que o sistema faz -->
+        <div class="section-card" id="sobre-sistema">
+          <h3>Bem-vindo à Biblioteca Virtual Alexandria</h3>
+          <p>
+            A Biblioteca Virtual Alexandria funciona como repositório digital acessível para materiais acadêmicos produzidos 
+            pelos estudantes do campus IFRN. 
+          </p>
+          <div class="screenshot mt-3">
+            <img src="static/img/tela_sobre.png" alt="Página Sobre a Biblioteca Virtual Alexandria" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+          </div>
+        </div>
+
+        <!-- Público-alvo e objetivo -->
+        <div class="section-card" id="publico-objetivo">
+          <h3>Público-alvo e Objetivo</h3>
+          <ul class="mb-0">
+            <li>
+                <strong>Público-alvo:</strong> 
+                A biblioteca foi desenvolvida para estudantes do campus.
+            </li>
+            <li>
+                <strong>Objetivo:</strong> 
+                O objetivo da Biblioteca Virtual é permitir que os estudantes compartilharem seus materiais acadêmicos, 
+                ao mesmo tempo que garante que outros usuários tenham acesso, facilitando a consulta e a colaboração acadêmica.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Como fazer cadastro -->
+        <div class="section-card" id="cadastro">
+          <h3>Como fazer o Cadastro?</h3>
+          <div class="step mt-2">
+            <div class="step-num">1</div>
+            <div>
+              <p>O botão “Cadastre-se” está no final do formulário de login. Ao clicá-lo, o usuário será 
+              redirecionado para o formulário de cadastro.</p>
+              <p>Os dados necessários para realizar o cadastro são:</p>
+              <p>
+                <li>Nome de Usuário</li>, 
+                <li>E-mail</li>, 
+                <li>Nome</li>, 
+                <li>Sobrenome</li>, 
+                <li>Senha</li> e 
+                <li>Confirmação de Senha</li>
+              </p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_cadastro.png" alt="Formulário de Cadastro" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
+              <p>
+                <li>Após preencher os dados, clique no botão “Cadastrar”. 
+                Se todos os dados estiverem corretos, o cadastro será realizado com sucesso.</li>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Como fazer login -->
+        <div class="section-card" id="login">
+          <h3>Como fazer Login?</h3>
+          <div class="step mt-2">
+            <div class="step-num">1</div>
+            <div>
+              <p>Após realizar o cadastro, o usuário será automaticamente redirecionado para a página de login.</p>
+              <p>Para fazer login, o usuário deve inserir as seguintes informações cadastradas:</p>
+              <p>
+                <li>Seu nome de usuário</li> 
+                <li>Sua senha</li> 
+              </p>
+              <p>Nos campos correspondentes</p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_login.png" alt="Formulário de Login" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
+              <p>
+                <li>Apos preencher os dados, clique no botão “Entrar”. Se os dados estiverem corretos, o usuário 
+                será redirecionado para a página inicial.</li>
+              </p>
+            </div>
+          </div>
+          <div class="step mt-3">
+            <div class="step-num">2</div>
+            <div>
+              <p>Após o usuário ser redirecionado para a página inicial, ele poderá visualizar os menus e navegar pela biblioteca.</p>
+              <div class="screenshot mt-2">
+                <img src="static/img/tela_index.png" alt="Página Inicial após Login" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+              </div>
+            </div>
+          </div>S
+        </div>
+
+        <!-- Funcionalidade principal 1 -->
+        <div class="section-card" id="funcionalidade-1">
+          <h3>Como publicar materiais?</h3>
+          <p>Orientações para o usuário enviar documentos, vídeos e recursos educacionais, incluindo categorias e palavras-chave.</p>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                  <p>Acesse “Meus Materiais” através do menu.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_icon_mat.png" alt="Icon Meus Materiais" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="step">
+                <div class="step-num">2</div>
+                <div>
+                  <p>Depois de acessar “Meus Materiais”, siga até o final na página e clique em “Adicionar Novo Material”.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_add_mat.png" alt="Botão Adicionar Novo Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="step mt-3 mt-md-0">
+                <div class="step-num">3</div>
+                <div>
+                  <p>Após clicar em "Adicionar Novo Material", preencha o formulário abaixo e clique em "Criar Material". 
+                    Obs.: O usuário pode chamar outro usuário para colaborar no material, basta ativar "Habilitar Colaboração"
+                    e inserir o email do colaborador.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_form_mat.png" alt="Formulário de Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="step mt-3 mt-md-0">
+                <div class="step-num">4</div>
+                <div>
+                  <p>Visualize, edite ou exclua seus materiais a qualquer momento em "Materiais Publicados".</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_mat_publicado.png" alt="Tela de edição/exclusão de material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Funcionalidade principal 2 -->
+        <div class="section-card" id="funcionalidade-2">
+          <h3>Como pesquisar e encontrar Materiais?</h3>
+          <p>Digite autor, título, tipo de material ou palavras-chave na barra de busca e localize materiais rapidamente.</p>
+          <div class="row g-3 mt-1">
+            <div class="col-lg-7">
+              <div class="step">
+                <div class="step-num">1</div>
+                <div>
+                  <p>Siga para a página inicial e digite o que deseja encontrar.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_busca.png" alt="Barra de busca na página inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+              <div class="step mt-3">
+                <div class="step-num">2</div>
+                <div>
+                  <p>Visualize o resultado de busca.</p>
+                  <div class="screenshot mt-2">
+                    <img src="static/img/tela_resultado_busca.png" alt="Resultado" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="section-card" style="padding:16px;">
+                <h4 class="mb-2">Dicas após realizar busca:</h4>
+                <ul class="mb-0">
+                  <p>
+                    <li>
+                      <strong>Abrir:</strong> 
+                      Em "Abrir", o usuário terá acesso as funções de visualização e avaliação 
+                      do material, podendo comentar e curtir.
+                    </li>
+                  </p>
+                  
+                  <p>
+                    <li>
+                      <strong>Salvar:</strong> 
+                      Em "Salvar", o usuário poderá salvar o material e acessa-lo em "Materiais 
+                      Salvos", na página "Meus Materiais".
+                    </li>
+                  </p>
+
+                  <p>
+                    <li>
+                      <strong>Autor:</strong> 
+                      Em "Autor", o usuário poderá visualizar o perfil 
+                      do usuário e seus materiais publicados.
+                    </li>
+                  </p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capturas de telas das funcionalidades -->
+        <div class="section-card" id="capturas">
+          <h3>Capturas de telas</h3>
+          <p>Principais telas do sistema com legendas curtas e objetivas.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="screenshot">
+                <img src="static/img/tela_index_menu_dropdown.png" alt="Tela Inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="screenshot">
+                <img src="static/img/tela_config.png" alt="Detalhes do Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="screenshot">
+                <img src="static/img/tela_avaliar_material.png" alt="Avaliar Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="screenshot">
+                <img src="static/img/tela_perfil.png" alt="Perfil do Usuário" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section-card" id="faq">
+          <h3>Perguntas frequentes (FAQ)</h3>
+          <div class="accordion mt-3" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
+                  Como redefinir minha senha?
+                </button>
+              </h2>
+              <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Explicar o processo de recuperação de senha de forma simples e objetiva.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-2">
+              <h2 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                  Não consigo fazer upload de um arquivo. O que faço?
+                </button>
+              </h2>
+              <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sugestão para verificar tamanho, formato permitido e conexão. Oriente tentar novamente e como buscar suporte.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item mt-2">
+              <h2 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                  Como encontro materiais do meu curso?
+                </button>
+              </h2>
+              <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Explicação sobre o uso de filtros por curso, tags e busca avançada.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contato / Suporte -->
+        <div class="section-card" id="contato">
+          <h3>Contato e suporte</h3>
+          <p>Canais oficiais de contato (e-mail, WhatsApp, sala/horário de atendimento) e tempo de resposta.</p>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="section-card" style="padding:16px;">
+                <h4 class="mb-2"><i class="bi bi-envelope"></i> E-mail</h4>
+                <p>contato@biblioteca.com</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="section-card" style="padding:16px;">
+                <h4 class="mb-2"><i class="bi bi-whatsapp"></i> WhatsApp</h4>
+                <p>(84) 99999-9999</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-copy">&copy; 2025 Biblioteca Virtual Alexandria</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
