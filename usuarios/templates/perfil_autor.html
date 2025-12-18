@@ -6,6 +6,10 @@
 
 {% block content %}
 
+<h1 class="perfil-titulo">
+    <span class="icon-brand">Perfil</span>
+</h1>
+
 <div class="perfil-container">
     <div class="perfil-box text-center">
         <h2>Perfil de {{ autor.get_full_name|default:autor.username }}</h2>
