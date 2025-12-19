@@ -93,7 +93,6 @@
   .section-card h2, .section-card h3 {
       font-family: Georgia, serif;
       font-weight: bold;
-      margin-bottom: 12px;
       color: var(--text);
   }
   .section-card p, .section-card li {
@@ -113,6 +112,7 @@
       border-radius: 12px;
       padding: 16px;
   }
+
   .step-num {
       width: 36px; height: 36px;
       border-radius: 8px;
@@ -124,6 +124,7 @@
       justify-content: center;
       flex: 0 0 36px;
   }
+
   .screenshot {
       background: rgba(0,0,0,0.5);
       border: 1px dashed rgba(255,255,255,0.25);
@@ -137,19 +138,39 @@
       font-size: 0.95rem;
   }
 
+  .screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ou contain */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .screenshot {
+      min-height: auto;
+    }
+    .screenshot img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+
   /* FAQ (accordion) */
   .accordion-button {
       background: rgba(0,0,0,0.25);
-      color: var(--text);
+      color: black;
   }
   .accordion-button:not(.collapsed) {
-      color: var(--text);
+      color: black;
       background: rgba(0,0,0,0.4);
       border-bottom: 1px solid rgba(255,255,255,0.12);
   }
   .accordion-body {
       background: rgba(0,0,0,0.25);
-      color: var(--text);
+      color: black;
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 0 0 12px 12px;
   }
@@ -200,6 +221,7 @@
 
   .nav-link i{
       color: white;
+      font-size: 20px;
   }
 </style>
   <header class="navbar d-flex align-items-center px-4">
@@ -221,12 +243,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#funcionalidade-1" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Funcionalidade 1">
+          <a href="#funcionalidade-1" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Publicar Material">
             <i class="bi bi-folder"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#funcionalidade-2" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Funcionalidade 2">
+          <a href="#funcionalidade-2" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Pesquisa">
             <i class="bi bi-search"></i>
           </a>
         </li>
@@ -256,9 +278,9 @@
             Este manual ajuda você a usar o sistema com segurança e facilidade. Foi escrito em linguagem simples, sem termos técnicos.
           </p>
           <div class="d-flex flex-wrap gap-2 mt-2">
-            <span class="badge-soft"><i class="bi bi-display"></i> Página Web responsiva</span>
-            <span class="badge-soft"><i class="bi bi-github"></i> Pode ser hospedado no GitHub Pages</span>
-            <span class="badge-soft"><i class="bi bi-folder2-open"></i> /docs/manual/index.html</span>
+            <span class="badge-soft"><i class="bi bi-display"></i> Página Web Responsiva</span>
+            <span class="badge-soft"><i class="bi bi-github"></i> Hospedado no GitHub Pages</span>
+            <span class="badge-soft"><i class="bi bi-folder2-open"></i> /docs/index.html</span>
           </div>
         </div>
 
@@ -300,11 +322,11 @@
               redirecionado para o formulário de cadastro.</p>
               <p>Os dados necessários para realizar o cadastro são:</p>
               <p>
-                <li>Nome de Usuário</li>, 
-                <li>E-mail</li>, 
-                <li>Nome</li>, 
-                <li>Sobrenome</li>, 
-                <li>Senha</li> e 
+                <li>Nome de Usuário</li> 
+                <li>E-mail</li> 
+                <li>Nome</li>
+                <li>Sobrenome</li> 
+                <li>Senha</li> 
                 <li>Confirmação de Senha</li>
               </p>
               <div class="screenshot mt-2">
@@ -470,22 +492,22 @@
           <div class="row g-3">
             <div class="col-md-6">
               <div class="screenshot">
-                <img src="img/tela_index_menu_dropdown.png" alt="Tela Inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+                <img src="img/tela_index_menu_dropdown.png" alt="Tela Inicial" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
               </div>
             </div>
             <div class="col-md-6">
               <div class="screenshot">
-                <img src="img/tela_config.png" alt="Detalhes do Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+                <img src="img/tela_config.png" alt="Detalhes do Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
               </div>
             </div>
             <div class="col-md-6">
               <div class="screenshot">
-                <img src="img/tela_avaliar_material.png" alt="Avaliar Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+                <img src="img/tela_avaliar_material.png" alt="Avaliar Material" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
               </div>
             </div>
             <div class="col-md-6">
               <div class="screenshot">
-                <img src="img/tela_perfil.png" alt="Perfil do Usuário" style="max-width:100%; border:1px solid #ccc; border-radius:4px; margin-top:8px;">
+                <img src="img/tela_perfil.png" alt="Perfil do Usuário" style="max-width:100%; border:1px solid #ccc; border-radius:4px;">
               </div>
             </div>
           </div>
@@ -498,36 +520,36 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="q1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
-                  Como redefinir minha senha?
+                  Como adicionar informações ao meu perfil?
                 </button>
               </h2>
               <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Explicar o processo de recuperação de senha de forma simples e objetiva.
+                  Em Área do Usuário, que você pode encontrar no menu principal, clique em "Edite-o ✏️", preencha os campos e salve as alterações.
                 </div>
               </div>
             </div>
             <div class="accordion-item mt-2">
               <h2 class="accordion-header" id="q2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
-                  Não consigo fazer upload de um arquivo. O que faço?
+                  Como vejo quem curtiu meus materiais?
                 </button>
               </h2>
               <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Sugestão para verificar tamanho, formato permitido e conexão. Oriente tentar novamente e como buscar suporte.
+                  Em Configurações, que você pode encontrar no menu principal, acesse a seção "Avaliações Recebidas" para ver uma lista de usuários que curtiram seus materiais.
                 </div>
               </div>
             </div>
             <div class="accordion-item mt-2">
               <h2 class="accordion-header" id="q3">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
-                  Como encontro materiais do meu curso?
+                  Como encontro determinados autores no sistema?
                 </button>
               </h2>
               <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Explicação sobre o uso de filtros por curso, tags e busca avançada.
+                  Na barra de pesquisa, digite o nome do autor e pressione Enter.
                 </div>
               </div>
             </div>
@@ -536,17 +558,16 @@
 
         <!-- Contato / Suporte -->
         <div class="section-card" id="contato">
-          <h3>Contato e suporte</h3>
-          <p>Canais oficiais de contato (e-mail, WhatsApp, sala/horário de atendimento) e tempo de resposta.</p>
+          <h3>Contato e Suporte</h3>
           <div class="row g-3 mt-1">
             <div class="col-md-6">
-              <div class="section-card" style="padding:16px;">
+              <div class="section-card" style="padding:18px;">
                 <h4 class="mb-2"><i class="bi bi-envelope"></i> E-mail</h4>
                 <p>contato@biblioteca.com</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="section-card" style="padding:16px;">
+              <div class="section-card" style="padding:18px;">
                 <h4 class="mb-2"><i class="bi bi-whatsapp"></i> WhatsApp</h4>
                 <p>(84) 99999-9999</p>
               </div>
